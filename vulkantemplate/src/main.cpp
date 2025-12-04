@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 
     CMakeLists << "cmake_minimum_required(VERSION 3.25)\n\n";
 
-    CMakeLists << "project(" << projectName << "LANGUAGES C CXX)\n\n";
+    CMakeLists << "project(" << projectName << " LANGUAGES C CXX)\n\n";
 
     CMakeLists << "set(CMAKE_CXX_STANDARD 20)\n";
     CMakeLists << "set(CMAKE_CXX_STANDARD_REQUIRED ON)\n";
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
          << "uint32_t version = 0;\n"
          << "vkEnumerateInstanceVersion(&version);\n"
          << "std::cout << \"Vulkan API Version: \" << \n"
-            "VK_VERSION_MAJOR(version) << \".\";\n"
+            "VK_VERSION_MAJOR(version) << \".\" << VK_VERSION_MINOR(version);\n"
          << "return 0;\n"
          << "}";
     main.close();
