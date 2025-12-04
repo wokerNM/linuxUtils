@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 
     CMakeLists << "target_link_libraries(${PROJECT_NAME}\n"
                << "${Vulkan_LIBRARIES}\n"
-               << "${GLFW3_LIBRARIES}\n)";
+               << "${GLFW3_LIBRARIES})\n";
 
     CMakeLists << "target_include_directories(${PROJECT_NAME} PUBLIC "
                   "\"${CMAKE_CURRENT_SOURCE_DIR}/include\")";
