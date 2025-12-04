@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
          << "uint32_t version = 0;\n"
          << "vkEnumerateInstanceVersion(&version);\n"
          << "std::cout << \"Vulkan API Version: \" << \n"
-            "VK_VERSION_MAJOR(version) << \".\"\n"
+            "VK_VERSION_MAJOR(version) << \".\";\n"
          << "return 0;\n"
          << "}";
     main.close();
